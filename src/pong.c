@@ -5,7 +5,7 @@
 #include <time.h>
 
 // Game configuration
-#define FIELD_WIDTH  70
+#define FIELD_WIDTH  60
 #define FIELD_HEIGHT 15
 #define PADDLE_HEIGHT 3
 
@@ -228,6 +228,9 @@ int main() {
     printf("\033[2J\033[H");
     disable_raw_mode();
     printf("Final Score - Player 1: %d | Player 2: %d\n", score.left, score.right);
-    
+        printf("press Enter twice to clear\n");
+    getchar();
+    getchar();
+    system("clear");
     return 0;
 }
